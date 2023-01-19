@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::post('/url', \App\Http\Controllers\MainVisualController::class)->name('getUrl');
+
+# Должно быть в api
+Route::get('{reference}', [\App\Http\Controllers\api\v1\MainController::class,'getLongUrl'])->name('getLongUrl');
