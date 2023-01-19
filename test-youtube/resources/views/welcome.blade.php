@@ -36,7 +36,7 @@
 
                 @if(session('short_url'))
                     <div class="form-group row">
-                        <a class="col-sm-2" href='{{session('token_name')}}'>{{session('short_url')}}</a>
+                        <a class="col-sm-2" style="color:green" href='{{session('token_name')}}'>{{session('short_url')}}</a>
                     </div>
                 @endif
 
